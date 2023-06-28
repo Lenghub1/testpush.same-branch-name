@@ -1,0 +1,117 @@
+div >li{
+    color: green;
+}
+html{
+    background-color: rgb(130, 106, 106);
+}
+div >p{
+    color: purple;
+}
+#click {
+    color: blue;
+}
+button{
+    color: blue;
+    
+}
+.button2:hover{
+    color: green;
+}
+/*
+hover mean cover
+*/
+.button2{
+    color: gold;
+}
+p{
+    color: navajowhite;
+}
+#id1{
+    color: saddlebrown;
+}
+a:hover{
+    color: red;
+    text-decoration: underline wavy;
+}
+a {
+    color: gray;
+}
+#name{
+    color: red;
+}
+#name1{
+    color: blue;
+}
+.b:nth-of-type(n){
+    color: yellow;
+}
+.b:nth-of-type(2n){
+    color: purple;
+}
+#pic1{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    left: 25px;
+}
+div{
+    border: 1px solid black;
+    /*border mean circle of */
+   
+}
+div:nth-of-type(2){
+    border: 1px solid rgb(216, 81, 171);
+}
+#Name{
+    color: rgb(147, 113, 113);
+    position: absolute;
+    left: 100px;
+}
+#date{
+    color: rgb(147, 113, 113);
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
+#notes{
+position: absolute;
+left: 25px;
+}
+a{
+    position: absolute;
+    left: 25px;
+    margin-top: -15px;
+    }
+#comment{
+    position: relative;
+   left: 20px;
+}
+#b2{
+    border-color: rgb(40, 35, 35);
+    border: solid;
+    border-left-style: dotted;
+    border-right-style: groove;
+
+}
+#b2:hover{
+    color: green;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #151b29;
+}
+button{
+    background-color: none;
+    color: #ffa260;
+    border: 2px solid;
+    padding: 1em 2em;
+
+}
+button:hover{
+    border-color: #f1ff5c;
+    
+}

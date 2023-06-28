@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #151b29;
+}
+button{
+    background-color: #151b29;
+    color: #ffa260;
+    border: 2px solid;
+    padding: 1em 2em;
+    font-size: 1em;
+    transition: all .5s ease;
+}
+button:hover{
+    border-color: #f1ff5c;
+    color: white;
+    box-shadow: 0 0.5em 0.5em -0.4em orange;
+    scale: 1.2;
+}
+.b1:hover{
+    background-color: none;
+    color: white;
+    border: 2px solid;
+    padding: 1em 2em;
+    font-size: 1em;
+    box-shadow: 0 0.6em 0.5em -0.5em white;
+}
+.b2:hover{
+    background-color: none;
+    color: skyblue;
+    border: 2px solid;
+    padding: 1em 2em;
+    font-size: 1em;
+    box-shadow: 0em 0.5em 0.4em -0.5em skyblue;
+}
