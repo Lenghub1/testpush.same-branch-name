@@ -5,7 +5,14 @@ import TodoList from './component/TodoList'
 
 function App() {
   const [completedScreen, setCompletedScreen] = useState(false);
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(() =>{
+    const localValue = localStorage.getItem('ITEMS')
+    if(localValue == null) return []
+    return JSON.parse(localValue)
+  })
+  useEffect(() => {
+    localStorage.setItem("ITEMS",JSON.stringify(tasks))
+  },[tasks])
 
   const addTask = (title, description) => {
     const newTask = { id: Date.now(), title, description, completed: false };
@@ -22,16 +29,14 @@ function App() {
   const removeTask = (taskId) => {
     const updatedTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(updatedTasks);
-
-    const editTask = (taskId, editedTitle, editedDescription) => {
-      const updatedTasks = tasks.map((task) =>
-        task.id === taskId
-          ? { ...task, title: editedTitle, description: editedDescription }
-          : task
-      );
-      setTasks(updatedTasks);
-    };
   };
+  const updateTask = (taskId, newTitle, newDescription) => {
+    const updatedTasks = tasks.map((task) =>
+      task.id === taskId ? { ...task, title: newTitle, description: newDescription } : task
+    );
+    setTasks(updatedTasks);
+  };
+  
 
   return (
     <div className='App'>
@@ -56,7 +61,8 @@ function App() {
           tasks={tasks}
           completedScreen={completedScreen}
           toggleTaskCompletion={toggleTaskCompletion}
-          
+          removeTask={removeTask}
+          updateTask={updateTask}
         />
       </div>
     </div>

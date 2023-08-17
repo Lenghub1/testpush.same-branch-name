@@ -15,7 +15,7 @@ function TodoInput({ addTask }) {
   return (
     <div className='todo-input'>
       <div className='todo-input-item'>
-        <label>Title</label>
+        <label className='td'>Title</label>
         <input
           type='text'
           placeholder='What task?'
@@ -24,7 +24,7 @@ function TodoInput({ addTask }) {
         />
       </div>
       <div className='todo-input-item'>
-        <label>Description</label>
+        <label className='td'>Description</label>
         <input
           type='text'
           placeholder='What do u want to do?'

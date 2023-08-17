@@ -1,117 +1,137 @@
-body{
+body {
   background-image: url(https://wallpaper-house.com/data/out/9/wallpaper2you_322434.jpg);
   background-attachment: fixed;
   background-size: cover;
+  margin: 0; 
+  font-family: Arial, sans-serif;
 }
-h1{
+
+h1 {
   color: white;
   text-align: center;
+  margin-top: 20px; 
 }
-.Todo-wrapper{
-background-color: azure;
-padding: 2%;
-width: fit-content;
-margin-left: auto;
-margin-right: auto;
-margin-top: 3%;
-max-height: 80vh;
-overflow-y: auto;
-box-shadow: 0px 5px 7px wheat;
-border-radius: 10px;
+
+
+.Todo-wrapper {
+  background-color: azure;
+  padding: 2%;
+  width: 90%; 
+  max-width: 600px; 
+  margin: 3% auto;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0px 5px 7px wheat;
+  border-radius: 10px;
 }
-.todo-input{
+
+.todo-input {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   border-bottom: 1px solid grey;
-  padding-bottom: 25px;
-  margin-bottom: 25px;
+  padding-bottom: 15px; 
+  margin-bottom: 15px; 
+  width: 100%;
 }
-.todo-input-item{
+
+.todo-input-item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-right: 25px;;
+  margin-right: 0; 
+  margin-bottom: 15px; 
+  width: 50%;
+  align-items: center;
 }
-.todo-input-item label{
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.todo-input-item input{
-  padding: 8px;
-  width: 250px;
-  
-
-}
-.primarybtn{
-  background-color: antiquewhite;
-  color: rgb(15, 15, 15);
-  border: none;
-  border-radius: 20px;
-  margin-top: 25px;
-  padding: 10px;
-  width: 60px;
-  cursor: pointer;
-}
-.primarybtn:hover{
-  background-color: skyblue;
-}
-.secondarybtn{
-  background-color: antiquewhite;
-  color: rgb(15, 15, 15);
-  border: none;
-  border-radius: 20px;
-  margin-top: 25px;
-  padding: 10px;
-  width: fit-content;
-  cursor: pointer;
-  margin: 2px;
-}
-.active{
-  background-color: aquamarine;
-}
-.todo-list{
-  display: flex;
-  flex-direction: column;
-}
-.btn-area{
+.td{
   margin-bottom: 15px;
 }
-.todo-list-item{
+.todo-input-item input {
+  padding: 8px;
+  width: 100%;
+}
+
+.primarybtn, .secondarybtn {
+  background-color: #3498db; 
+  color: #ffffff; 
+  border: none;
+  border-radius: 30px; 
+  padding: 12px 20px; 
+  cursor: pointer;
+  display: inline-block; 
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; 
+}
+
+.primarybtn:hover, .secondarybtn:hover {
+  background-color: #ff5722; 
+  transform: scale(1.05); 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.secondarybtn {
+  padding: 8px 15px; 
+  font-size: 14px; 
+  margin: 5px; 
+}
+
+/* .primarybtn:hover, .secondarybtn:hover {
+  background-color: skyblue;
+} */
+
+/* Todo List */
+.todo-list-item {
   background-color: lightblue;
   display: flex;
-  justify-content: space-between;
-  padding: 25px;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  flex-direction: column; /* Adjust for mobile layout */
+  padding: 15px; /* Reduce padding */
   margin-bottom: 10px;
   border-radius: 20px;
+  margin-top: 10px;
 }
-#h3{
-  font-size: 25px;
+
+#h3 {
+  font-size: 20px; /* Adjust font size */
 }
-p{
-  font-size: 14px;
+
+p {
+  font-size: 12px; /* Adjust font size */
   color: rgb(83, 93, 102);
-  margin-top: 0px;
+  margin-top: 0;
 }
-.btndc{
-  margin-top: 20px;
-}
-.btnd{
-  font-size: 20px;
-  margin: 12px;
-  border: none;
+
+.btnd, .btnc, .btne {
+  font-size: 16px; /* Adjust font size */
+  margin: 8px;
   border-radius: 20px;
-}
-.btnc{
-  border: none;
-  border-radius: 20px;
-  font-size: 20px;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; 
+  
 }
 .btnd:hover{
-  background-color: rgb(84, 229, 84);
+  background-color: green ;
 }
 .btnc:hover{
-  background-color: rgb(57, 224, 57);
+  background-color: green ;
+}
+.btne:hover{
+  background-color: green ;
+}
+
+
+.edit-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+
+}
+.edit-popup input{
+  margin: 3px;
+  
+}
+.edit-popup button{
+  margin: 3px;
 }
