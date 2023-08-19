@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import './TodoList.css';
 
 function TodoList({ tasks, completedScreen, toggleTaskCompletion, removeTask, updateTask }) {
   const [editingTaskId, setEditingTaskId] = useState(null);
   const [editedTitle, setEditedTitle] = useState('');
   const [editedDescription, setEditedDescription] = useState('');
   const [showEditPopup, setShowEditPopup] = useState(false); // New state for popup
+  const [showBackdrop, setShowBackdrop] = useState(false);
 
   const editTask = (taskId) => {
     const taskToEdit = tasks.find((task) => task.id === taskId);
@@ -13,6 +15,7 @@ function TodoList({ tasks, completedScreen, toggleTaskCompletion, removeTask, up
       setEditedTitle(taskToEdit.title);
       setEditedDescription(taskToEdit.description);
       setShowEditPopup(true); // Show the edit popup
+      setShowBackdrop(true);
     }
   };
 
@@ -23,6 +26,7 @@ function TodoList({ tasks, completedScreen, toggleTaskCompletion, removeTask, up
       setEditedTitle('');
       setEditedDescription('');
       setShowEditPopup(false); // Hide the edit popup after saving
+      setShowBackdrop(false);
     }
   };
 
@@ -31,6 +35,7 @@ function TodoList({ tasks, completedScreen, toggleTaskCompletion, removeTask, up
     setEditedTitle('');
     setEditedDescription('');
     setShowEditPopup(false); // Hide the edit popup on cancel
+    setShowBackdrop(false);
   };
 
   return (
@@ -61,6 +66,7 @@ function TodoList({ tasks, completedScreen, toggleTaskCompletion, removeTask, up
             </div>
           </div>
         ))}
+      {showBackdrop && <div className='backdrop'></div>}
 
       {showEditPopup && (
         <div className='edit-popup'>

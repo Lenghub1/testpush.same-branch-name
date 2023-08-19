@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import TodoInput from './component/TodoInput';
-import TodoList from './component/TodoList';
+import TodoInput from './TodoInput';
+import TodoList from './TodoList';
 
 function App() {
   const [completedScreen, setCompletedScreen] = useState(false);
@@ -18,7 +18,6 @@ function App() {
   }, [tasks]);
 
   useEffect(() => {
-    // Filter tasks based on the search query
     const filtered = tasks.filter(
       (task) =>
         task.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -57,29 +56,29 @@ function App() {
       <div className='Todo-wrapper'>
         <TodoInput addTask={addTask} />
         <div className='btn-area'>
-          <div className='btn'>
-            <button
-              className={`secondarybtn ${completedScreen === false && 'active'}`}
-              onClick={() => setCompletedScreen(false)}
-           >
-             Todo
-           </button>
-           <button
-             className={`secondarybtn ${completedScreen === true && 'active'}`}
-             onClick={() => setCompletedScreen(true)}
-           >
-             Completed
-            </button>
-          </div>
-          <div className='search-container'>
-          <input
-            type='text'
-            placeholder='Search Title'
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          <button><i class="fa-solid fa-magnifying-glass"></i> </button>
-        </div>
+            <div className='btn'>
+              <button
+                className={`secondarybtn ${completedScreen === false && 'active'}`}
+                onClick={() => setCompletedScreen(false)}
+             >
+              Todo
+             </button>
+              <button
+                className={`secondarybtn ${completedScreen === true && 'active'}`}
+                onClick={() => setCompletedScreen(true)}
+             >
+                Completed
+               </button>
+            </div>
+           <div className='search-container'>
+           <input
+              type='text'
+             placeholder='Search Title'
+             value={searchQuery}
+             onChange={(e) => setSearchQuery(e.target.value)}
+           />
+           <button><i class="fa-solid fa-magnifying-glass"></i> </button>
+         </div>
         </div>
         
         <TodoList
