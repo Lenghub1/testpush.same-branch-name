@@ -51,6 +51,15 @@ h1 {
   padding: 8px;
   width: 100%;
 }
+.btn-area{
+  display: flex;
+  justify-content: space-between;
+}
+.btn-area input{
+  margin: 12px;
+  width: 250px;
+  text-align: center;
+}
 
 .primarybtn, .secondarybtn {
   background-color: #3498db; 
@@ -104,18 +113,22 @@ p {
   font-size: 16px; /* Adjust font size */
   margin: 8px;
   border-radius: 20px;
+  border: none;
+  background-color: white;
   transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; 
   
 }
-.btnd:hover{
-  background-color: green ;
+.btnd:hover,.btnc:hover,.btne:hover{
+  /* background-color: green ; */
+  transform: scale(1.25); 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
-.btnc:hover{
+/* .btnc:hover{
   background-color: green ;
 }
 .btne:hover{
   background-color: green ;
-}
+} */
 
 
 .edit-popup {
@@ -134,4 +147,13 @@ p {
 }
 .edit-popup button{
   margin: 3px;
+}
+@media(max-width:700px){
+  .btn-area input{
+    width: 60%;
+    text-align: center;
+  }
+  .btn{
+    display: flex;
+  }
 }
