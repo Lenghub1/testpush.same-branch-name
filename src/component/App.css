@@ -8,6 +8,19 @@ body {
   margin: 0; 
   font-family: Arial, sans-serif;
 }
+.search-container {
+  position: relative;
+}
+.secondarybtn.active {
+  background-color: #ff5722;
+  color: white;
+}
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
 
 
 h1 {
@@ -31,10 +44,11 @@ h1 {
 
 @media (max-width: 700px) {
   .btn-area input {
-    width: 65%;
+    width: 85%;
     text-align: center;
   }
   .btn {
     display: flex;
+    justify-content: space-betweenn
   }
 }

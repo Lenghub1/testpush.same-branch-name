@@ -56,29 +56,29 @@ function App() {
       <div className='Todo-wrapper'>
         <TodoInput addTask={addTask} />
         <div className='btn-area'>
-            <div className='btn'>
-              <button
-                className={`secondarybtn ${completedScreen === false && 'active'}`}
-                onClick={() => setCompletedScreen(false)}
-             >
+          <div className='btn'>
+            <button
+              className={`secondarybtn ${completedScreen === false ? 'active' : ''}`}
+              onClick={() => setCompletedScreen(false)}
+            >
               Todo
-             </button>
-              <button
-                className={`secondarybtn ${completedScreen === true && 'active'}`}
-                onClick={() => setCompletedScreen(true)}
-             >
-                Completed
-               </button>
-            </div>
-           <div className='search-container'>
-           <input
+            </button>
+            <button
+              className={`secondarybtn ${completedScreen === true ? 'active' : ''}`}
+              onClick={() => setCompletedScreen(true)}
+            >
+              Completed
+            </button>
+          </div>
+          <div className='search-container'>
+            <i className='search-icon fas fa-search'></i>
+            <input
               type='text'
-             placeholder='Search Title'
-             value={searchQuery}
-             onChange={(e) => setSearchQuery(e.target.value)}
-           />
-           <button><i class="fa-solid fa-magnifying-glass"></i> </button>
-         </div>
+              placeholder='Search Title'
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
         </div>
         
         <TodoList
