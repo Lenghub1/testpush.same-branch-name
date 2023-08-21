@@ -8,8 +8,27 @@ body {
   margin: 0; 
   font-family: Arial, sans-serif;
 }
+.Todo-wrapper {
+  background-color: azure;
+  padding: 2%;
+  width: 90%; 
+  max-width: 500px; 
+  margin: 3% auto;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0px 5px 7px wheat;
+  border-radius: 10px;
+}
+.description {
+  word-wrap: break-word;
+}
+
 .search-container {
   position: relative;
+}
+.search-container input{
+  border-radius: 20px;
+  font-size: 16px;
 }
 .secondarybtn.active {
   background-color: #ff5722;

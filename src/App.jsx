@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import TodoInput from './TodoInput';
-import TodoList from './TodoList';
+import TodoInput from './component/TodoInput';
+import TodoList from './component/TodoList';
 
 function App() {
   const [completedScreen, setCompletedScreen] = useState(false);

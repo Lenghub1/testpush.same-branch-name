@@ -46,7 +46,7 @@ function TodoList({ tasks, completedScreen, toggleTaskCompletion, removeTask, up
           <div className='todo-list-item' key={task.id}>
             <div>
               <h3>{task.title}</h3>
-              <p>{task.description}</p>
+              <p className='description'>{task.description}</p>
             </div>
             <div className='btndc'>
               <button className='btne' onClick={() => editTask(task.id)}>
@@ -70,18 +70,22 @@ function TodoList({ tasks, completedScreen, toggleTaskCompletion, removeTask, up
 
       {showEditPopup && (
         <div className='edit-popup'>
-          <input
+          <div>
+           <input
             type='text'
             value={editedTitle}
             onChange={(e) => setEditedTitle(e.target.value)}
-          />
-          <input
+           />
+           <input
             type='text'
             value={editedDescription}
             onChange={(e) => setEditedDescription(e.target.value)}
-          />
-          <button onClick={saveEditedTask}>Save</button>
-          <button onClick={cancelEdit}>Cancel</button>
+           />
+          </div>
+          <div>
+            <button className='editbtn' onClick={saveEditedTask}>Save</button>
+            <button className='editbtn' onClick={cancelEdit}>Cancel</button>
+          </div>
         </div>
       )}
     </div>
