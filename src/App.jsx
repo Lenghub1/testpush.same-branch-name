@@ -69,6 +69,7 @@ function App() {
             >
               Completed
             </button>
+            
           </div>
           <div className='search-container'>
             <i className='search-icon fas fa-search'></i>

@@ -18,7 +18,7 @@
   
   .btnd, .btnc, .btne {
     font-size: 16px; /* Adjust font size */
-    margin: 8px;
+    margin: 4px;
     border-radius: 20px;
     border: none;
     background-color: white;

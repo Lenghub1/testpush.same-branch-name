@@ -15,6 +15,7 @@ function TodoInput({ addTask }) {
   return (
     <div className='todo-input'>
       <div className='todo-input-item'>
+        <form action="on"></form>
         <label className='td'>Title</label>
         <input
           type='text'
