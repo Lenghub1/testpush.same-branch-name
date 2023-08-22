@@ -31,7 +31,7 @@
     font-size: 16px;
   }
   
-  .primarybtn, .secondarybtn {
+  .primarybtn {
     background-color: #3498db; 
     color: #ffffff; 
     border: none;
@@ -41,17 +41,51 @@
     display: inline-block; 
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; 
     margin: 2px;
+    margin-top: 10px;
     font-size: 16px;
+    width: 40%;
   }
+  .secondarybtn {
+    background-color: transparent;
+    color: #ffffff; 
+    border: none;
+    padding: 12px 20px; 
+    cursor: pointer;
+    display: inline-block; 
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; 
+    margin: 2px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.secondarybtn.active {
+  color: black;
+  text-decoration: underline;
+}
+
   
-  .primarybtn:hover, .secondarybtn:hover {
+  .primarybtn:hover {
     background-color: #ff5722; 
     transform: scale(1.05); 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+  }
+  .secondarybtn:hover{
+    background-image: url('https://www.myfreetextures.com/wp-content/uploads/2014/10/book6.jpg');
   }
   @media(max-width:500px){
    .secondarybtn {
       padding: 12px;
     }
   }
+  @media(max-width:900px){
+    .secondarybtn{
+      border-radius: 20px;
+    }
+    .secondarybtn.active {
+      background-color: #ff5722;
+      color: white;
+      text-decoration: none;
+    }
+  }
+
   

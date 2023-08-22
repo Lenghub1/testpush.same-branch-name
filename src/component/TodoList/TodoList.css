@@ -1,34 +1,55 @@
 .todo-list-item {
-    background-color: lightblue;
+  background-image: url('http://wallpapercave.com/wp/MFwJJsF.jpg');
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: row; 
+  padding: 15px; 
+  margin-bottom: 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+  justify-content: space-between;
+  word-break: break-all;
+}
+
+.btn-area input {
+  margin: 12px;
+  width: 250px;
+  text-align: center;
+}
+.btn{
+  gap: 2px;
+  padding: 10px;
+}
+.btn-area{
+  display: flex;
+  justify-content: space-between;
+}
+  .todo-list-item .btndc {
     display: flex;
-    flex-direction: column; 
-    padding: 15px; 
-    margin-bottom: 10px;
-    border-radius: 20px;
-    margin-top: 10px;
+    align-items: center;
   }
   
   p {
     font-size: 16px; 
-    color: rgb(83, 93, 102);
+    color: white;
     margin-top: 0;
   }
   
   .btnd, .btnc, .btne {
     font-size: 16px;
-    margin: 8px;
+    margin: 5px;
     border-radius: 20px;
     border: none;
     background-color: white;
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; 
-  }
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
   
   .btnd:hover, .btnc:hover, .btne:hover {
     transform: scale(1.25); 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   }
-  
-  
+
   .edit-popup input {
     margin: 3px;
     width: 80%;
