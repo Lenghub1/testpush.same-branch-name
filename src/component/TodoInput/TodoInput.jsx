@@ -32,7 +32,7 @@ function TodoInput({ addTask }) {
           onChange={(e) => setDescription(e.target.value)}
         />
       </div>
-      <div className='todo-input-item'>
+      <div className='todo-input-button'>
         <button type='button' onClick={handleAddTask} className='primarybtn'>
           Add
         </button>
