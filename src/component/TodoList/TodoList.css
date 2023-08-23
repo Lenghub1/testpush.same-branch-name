@@ -1,7 +1,6 @@
 .todo-list-item {
-  background-attachment: fixed;
   display: flex;
-  flex-direction: row; 
+  flex-direction: column; 
   padding: 15px; 
   margin-bottom: 10px;
   border-radius: 20px;
@@ -30,8 +29,13 @@
   
   p {
     font-size: 16px; 
-    color: white;
     margin-top: 0;
+    border-bottom: 1px solid black;
+  }
+  h3{
+    font-size: 20px;
+    color: #21295C;
+    border-bottom: 1px solid black;
   }
   
   .btnd, .btnc, .btne {

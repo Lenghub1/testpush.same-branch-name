@@ -33,12 +33,31 @@ function App() {
     );
     setTasks(updatedTasks);
   };
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredTasks, setFilteredTasks] = useState([]);
+  useEffect(() => {
+    const filtered = tasks.filter(
+      (task) =>
+        task.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        task.id.toString().includes(searchQuery)
+    );
+    setFilteredTasks(filtered);
+  }, [searchQuery, tasks]);
 
   return (
     <div className='App'>
       <h1>My Todos</h1>
       <div className='Todo-wrapper'>
         <TodoInput addTask={addTask} />
+        <div className='search-container'>
+            <i className='search-icon fas fa-search'></i>
+            <input
+              type='text'
+              placeholder='Search Title'
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
         <div className='container-todo-list'>
           <div className='btn-area'>
             <div className='btn'>
@@ -57,8 +76,9 @@ function App() {
               
             </div>
           </div>
+          
           <TodoList
-            tasks={tasks}
+            tasks={filteredTasks}
             removeTask={removeTask}
             completedScreen={completedScreen}
             toggleTaskCompletion={toggleTaskCompletion}

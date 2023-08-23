@@ -46,7 +46,7 @@ function TodoList({ tasks, completedScreen, toggleTaskCompletion, removeTask, up
           <div className='todo-list-item' key={task.id}>
             <div>
               <h3>{task.title}</h3>
-              <p className='description'>{task.description}</p>
+              <p>{task.description}</p>
             </div>
             <div className='btndc'>
               <button className='btne' onClick={() => editTask(task.id)}>

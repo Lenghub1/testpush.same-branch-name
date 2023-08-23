@@ -1,69 +1,85 @@
 body {
-    background-image: url(https://cdn1.vectorstock.com/i/1000x1000/13/40/todo-list-seamless-pattern-universal-background-vector-7561340.jpg);
-    background-size: cover;
-    margin: 0; 
-    font-family: Arial, sans-serif;
+  background-image: url(./assets/background-img/body-background.jpg);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.Todo-wrapper {
+  padding: 2%;
+  width: 90%;
+  max-width: 500px;
+  margin: 3% auto;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0px 5px 7px rgb(0, 0, 0);
+  border-radius: 10px;
+  overflow-x: hidden;
+}
+.Todo-wrapper::-webkit-scrollbar{
+  width: 2px;
+}
+
+.search-container {
+  position: relative;
+  left: 58%;
+}
+
+.search-container input {
+  border-radius: 20px;
+  font-size: 16px;
+  width: 40%;
+  text-align: center;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 36%;
+  transform: translateY(-50%);
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+  .btn-area input {
+    width: 85%;
+    text-align: center;
+  }
+  .btn {
+    display: flex;
+    justify-content: space-between; /* Fixed typo 'space-betweenn' */
+  }
+}
+
+@media (min-width: 770px) {
+  .container-todo-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .todo-list {
+    width: 100%;
   }
   .Todo-wrapper {
-    padding: 2%;
-    width: 90%; 
-    max-width: 500px; 
-    margin: 3% auto;
-    max-height: 80vh;
-    overflow-y: auto;
-    box-shadow: 0px 5px 7px wheat;
-    border-radius: 10px;
+    max-width: 900px;
   }
-  
-  .search-container {
-    position: relative;
+  .secondarybtn {
+    width: 90%;
   }
-  .search-container input{
-    border-radius: 20px;
-    font-size: 16px;
+  .btn {
+    border-right: 1px solid grey;
+    padding-right: 10px;
   }
-  .search-icon {
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
+  .todo-list-item {
+    margin-left: 20px;
   }
-
-  h1 {
-    color: white;
-    text-align: center;
-    margin-top: 20px; 
+  .search-container{
+    left: 25%
   }
-  
-  @media (max-width: 700px) {
-    .btn-area input {
-      width: 85%;
-      text-align: center;
-    }
-    .btn {
-      display: flex;
-      justify-content: space-betweenn
-    }
+  .search-icon{
+    left: 37%;
   }
-  @media (min-width:770px ){
-    .container-todo-list{
-      display: flex;
-      justify-content: space-between;
-    }
-    .todo-list{
-      width: 100%;
-    }
-    .Todo-wrapper{
-      max-width: 900px;
-    }
-    .secondarybtn{
-      width: 90%;
-    }
-    .btn{
-      border-right: 1px solid grey;
-      padding-right: 10px;
-    }
-    .todo-list-item{
-      margin-left: 20px;
-    }
-  }
+}
